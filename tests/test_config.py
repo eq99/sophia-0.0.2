@@ -10,6 +10,8 @@ def test_development_config(app):
 
 def test_base_config(app):
     app.config.from_object('app.config.Base')
+    assert 'sophia' in app.config['SQLALCHEMY_DATABASE_URI']
+    assert '0.0' not in app.config['SQLALCHEMY_DATABASE_URI']
+    assert app.config['SECRET_KEY']
     assert not app.config['DEBUG']
     assert not app.config['TESTING']
-    assert 'sql' in app.config['SQLALCHEMY_DATABASE_URI']

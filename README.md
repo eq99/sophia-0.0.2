@@ -7,18 +7,13 @@
 poetry run gunicorn "app:create_app()" --reload
 ```
 
-# alembic
 
-`alembic.ini`:
-sqlalchemy.url = xxx
+# database
 
-`migrations/env.py`:
-
-```python
-from app.config import DB_DSN
-from app import db, load_modules
-
-load_modules()
-config.set_main_option("sqlalchemy.url", str(DB_DSN))
-target_metadata = db
+```sh
+poetry add Flask-SQLAlchemy Flask-Migrate
+poetry run flask db init
+poetry run flask db migrate
+poetry run flask db upgrade
+poetry run flask db --help
 ```

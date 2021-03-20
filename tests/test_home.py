@@ -6,4 +6,4 @@ def test_home(app):
     res = client.get('/')
     data = res.data.decode()
     assert res.status_code == 200
-    assert 'Book list' in data
+    assert 'hello' in data
