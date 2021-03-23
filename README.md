@@ -1,6 +1,13 @@
 # sophia-0.0.2
 
 
+# Next.js
+
+```sh
+npx create-next-app --example with-tailwindcss with-tailwindcss-app
+```
+
+
 # Poetry
 
 ```sh
