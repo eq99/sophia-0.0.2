@@ -4,3 +4,30 @@ a {
     color: black;
     text-decoration: none;
 }
+
+/*
+style sheet for markdown table.
+These styles should be add only for Chapter.jsx,
+but I can't find a better solution.
+
+*/
+
+tr {
+  border-top: 1px solid #c6cbd1;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+table tr:nth-child(2n) {
+  background: #f6f8fa;
+}
+
+table{
+    width: 100%;
+    margin: 0 auto;
+}

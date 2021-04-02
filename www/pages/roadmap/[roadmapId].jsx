@@ -1,4 +1,5 @@
 import CourseCard from "../../components/course-card";
+import Layout from "../../components/layout";
 
 export default function HomeComputer() {
   const courses = [
@@ -33,12 +34,14 @@ export default function HomeComputer() {
   ));
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <div className="row">{courseCards}</div>
+    <Layout>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="row">{courseCards}</div>
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
